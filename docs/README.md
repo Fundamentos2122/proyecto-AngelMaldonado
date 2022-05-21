@@ -2,7 +2,7 @@
 
 ## Atomic Design
 
-El sistema de diseño utilizado para el proyecto es **Atomic Design** el cual se basa en la construcción de las páginas finales mediante **átomos->moléculas->organismos->plantillas->páginas**. Las unidades más pequeñas son los valores de estilo como clores, tipografía, sombreados, etc. Por lo tanto también estos tienen su propio apartado.
+El sistema de diseño utilizado para el proyecto es **Atomic Design** el cual se basa en la construcción de las páginas finales mediante **átomos->moléculas->organismos->plantillas->páginas**. Las unidades más pequeñas son los valores de estilo como clores, tipografía, sombreados, etc. Por lo tanto también estos tienen su propio apartado. Este sistema solo se utilizó para el proceso de diseño, pero para su implementación en el proyecto se utiliza la metodología [CubeCSS](https://cube.fyi/#what-does-cube-css-stand-for)
 
 # 🖌 Estilos
 
