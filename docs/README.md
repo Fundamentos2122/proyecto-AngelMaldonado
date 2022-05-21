@@ -20,10 +20,6 @@ El sistema de diseño utilizado para el proyecto es **Atomic Design** el cual se
 
 ![Sombras | Industria Emblemática](<.gitbook/assets/Sombras 🔮 (1).svg>)
 
----
-description: Solo hay un único logo de la empresa que se utiliza en el diseño.
----
-
 ## Logo
 
 ![Logo | Industria Emblemática](.gitbook/assets/ie.svg)
