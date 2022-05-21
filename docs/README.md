@@ -10,7 +10,7 @@ El sistema de diseño utilizado para el proyecto es **Atomic Design** el cual se
 
 ## Colores
 
-![Colores | Industria Emblemática](../../.gitbook/assets/Colores.svg)
+![Colores | Industria Emblemática](.gitbook/assets/Colores.svg)
 
 ## Tipografía
 
