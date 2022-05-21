@@ -14,11 +14,11 @@ El sistema de diseño utilizado para el proyecto es **Atomic Design** el cual se
 
 ## Tipografía
 
-![Tipografía | Industria Emblemática](../../.gitbook/assets/Tipografía.svg)
+![Tipografía | Industria Emblemática](.gitbook/assets/Tipografía.svg)
 
 ## Sombras
 
-![Sombras | Industria Emblemática](<../../.gitbook/assets/Sombras 🔮 (1).svg>)
+![Sombras | Industria Emblemática](<.gitbook/assets/Sombras 🔮 (1).svg>)
 
 ---
 description: Solo hay un único logo de la empresa que se utiliza en el diseño.
@@ -26,7 +26,7 @@ description: Solo hay un único logo de la empresa que se utiliza en el diseño.
 
 ## Logo
 
-![Logo | Industria Emblemática](../../.gitbook/assets/ie.svg)
+![Logo | Industria Emblemática](.gitbook/assets/ie.svg)
 
 # 🧩  Componentes
 
@@ -36,42 +36,42 @@ description: Solo hay un único logo de la empresa que se utiliza en el diseño.
 
 ### Íconos
 
-![Íconos | Industria Emblemática](<../../../.gitbook/assets/Íconos 🖼️.svg>)
+![Íconos | Industria Emblemática](<.gitbook/assets/Íconos 🖼️.svg>)
 
 ### Botones
 
-![Botones | Industria Emblemática](<../../../.gitbook/assets/Botones 🎮.svg>)
+![Botones | Industria Emblemática](<.gitbook/assets/Botones 🎮.svg>)
 
 ### Cards
 
-![Cards| Industria Emblemática](<../../../.gitbook/assets/Cards 📸.svg>)
+![Cards| Industria Emblemática](<.gitbook/assets/Cards 📸.svg>)
 
 ### Elementos de listas y controles
 
-![](<../../../.gitbook/assets/Elementos de listas & controles 📝️.svg>)
+![](<.gitbook/assets/Elementos de listas & controles 📝️.svg>)
 
 ## Moléculas
 
 ### Cards
 
-![](<../../../.gitbook/assets/Cards 🎴.svg>)
+![](<.gitbook/assets/Cards 🎴.svg>)
 
 ### Entradas de texto
 
-![Entradas de texto | Industria Emblemática](<../../../.gitbook/assets/Entradas de texto ⌨️.svg>)
+![Entradas de texto | Industria Emblemática](<.gitbook/assets/Entradas de texto ⌨️.svg>)
 
 ### Controles y listas
 
-![Controles y listas| Industria Emblemática](<../../../.gitbook/assets/Controles & Listas 📝.svg>)
+![Controles y listas| Industria Emblemática](<.gitbook/assets/Controles & Listas 📝.svg>)
 
 ## Organismos
 
 ### Sliders
 
-![](<../../../.gitbook/assets/Sliders 🪧.svg>)
+![](<.gitbook/assets/Sliders 🪧.svg>)
 
 ### Barras de navegación
-![](<../../../.gitbook/assets/Barras de navegación 🖱️.svg>)
+![](<.gitbook/assets/Barras de navegación 🖱️.svg>)
 
 ## 📃 Plantillas + Páginas (Mockup)
 
