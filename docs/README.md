@@ -96,11 +96,56 @@ Prototipo interactivo.
 
 > Para este proyecto se utiliza la arquitectura **MVC (Model View Controller)**.\
 > Esta arquitectura esta pensada para manejar diferentes aspectos de una aplicación en desarrollo. Funciona principalmente para separar la capa de _**presentación**_ (**front**) de la capa de lógica del _**negocio**_ (**back**). Es la arquitectura más popular en el desarrollo web y de aplicaciones.
->
-> Los 3 componentes que describen este patrón de diseño son:
->
-> 1. **Modelo**: almacena y maneja la información de una base de datos.
-> 2. **View**: se encarga de la interfaz gráfica y las pantallas con las que el usuario final va a interactuar y las que mostrarán la información del _modelo_.
-> 3. Controlador: es el _cerebro_ de la aplicación, este componente conecta el _modelo_ y la _vista_. El controlador convierte entradas de la capa de _vista_ en peticiones para obtener o actualizar la información del _modelo_.
+
+Los 3 componentes que describen este patrón de diseño son:
+
+1. **Modelo**: almacena y maneja la información de una base de datos.
+2. **View**: se encarga de la interfaz gráfica y las pantallas con las que el usuario final va a interactuar y las que mostrarán la información del _modelo_.
+3. Controlador: es el _cerebro_ de la aplicación, este componente conecta el _modelo_ y la _vista_. El controlador convierte entradas de la capa de _vista_ en peticiones para obtener o actualizar la información del _modelo_.
 
 ![Función del MVC con interacción del usuario.](.gitbook/assets/mvc.jpg)
+
+### Arquitectura en MVC en el proyecto
+
+La arquitectura para el proyecto es la siguiente:
+
+````
+
+project
+|
+└───assets
+|    |
+│    └───css
+|    |    |    archivos .css...
+|    |
+|    └───img
+|    |    |    archivos .jpg, .png, .webp, etc...
+|    |
+|    └───js
+|        |    archivos .js...
+|
+└───controllers
+|    |    archivos .php (para capa controller)...
+|
+└───docs
+|    |
+|    └───.gitbook
+|    |    |    archivos .jpg, .png, .svg, etc...
+|    |
+|    |    README.md
+|    |    SUMMARY.md
+|
+└───models
+|    |    archivos .php (para capa model)...
+|
+└───views
+|    |
+|    └───layouts
+|    |    |    archivos .php (que definen distribución de la vista)...
+|    |
+|    |    archivos .php (para capa de la vista)...
+|
+|    .gitbook.yaml
+|    index.html
+
+````
