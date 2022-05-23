@@ -3,3 +3,310 @@
 *  Created On : Mon Mar 28 2022
 *  File : styles.css
 *******************************************/
+
+:root {
+    /*╱╱╱╱╭╮
+    ╱╱╱╱╱╱┃┃
+    ╭━━┳━━┫┃╭━━┳━┳━━┳━━╮
+    ┃╭━┫╭╮┃┃┃╭╮┃╭┫┃━┫━━┫
+    ┃╰━┫╰╯┃╰┫╰╯┃┃┃┃━╋━━┃
+    ╰━━┻━━┻━┻━━┻╯╰━━┻━━╯*/
+    --Color-Negro: #000;
+    --Color-Blanco: #fff;
+    --Color-Prim-azul1: #105f7d;
+    --Color-Prim-azul2: #4f9bb9;
+    --Color-Prim-azul3: #b5eaff;
+    --Color-Prim-verde1: #0d903e;
+    --Color-Prim-verde2: #45db7d;
+    --Color-Prim-verde3: #a5ffc6;
+    --Color-Prim-gris1: #575757;
+    --Color-Prim-gris2: #8b8b8b;
+    --Color-Prim-gris3: #c4c4c4;
+    --Color-Prim-rojo1: #dd2222;
+    --Color-Prim-rojo2: #ff5454;
+    --Color-Prim-rojo3: #ff8787;
+    --Color-Prim-amarillo1: #fec84b;
+    --Color-Prim-amarillo2: #fedf89;
+    --Color-Prim-amarillo3: #fef0c7;
+    --Color-Prim-verde4: #0d903e;
+    --Color-Prim-verde5: #45db7d;
+    --Color-Prim-verde6: #a5ffc6;
+    --Color-Sec-morado1: #1c2d88;
+    --Color-Sec-morado2: #5c72ea;
+    --Color-Sec-morado3: #a9b6ff;
+    --Color-Sec-amarillo1: #fff500;
+    --Color-Sec-amarillo2: #fff859;
+    --Color-Sec-amarillo3: #fffba4;
+    --Color-Extra-lingrad-azul23: linear-gradient(180deg, var(--Color-Prim-azul2) 0%, var(--Color-Prim-azul3) 100%);
+
+    /*╱╱╱╱╱╱╱╭━╮╱╭━╮╱╱╱╱╱╱╱╱╭╮
+    ╱╱╱╱╱╱╱╱╱┃╭╯╱┃╭╯╱╱╱╱╱╱╱╭╯╰╮
+    ╭━━┳━━┳━┳╯╰╮╭╯╰┳╮╭┳━━┳━╋╮╭╋━━╮
+    ┃╭━┫╭╮┃╭╋╮╭╯╰╮╭┫┃┃┃┃━┫╭╮┫┃┃┃━┫
+    ┃╰━┫╰╯┃┃┃┃┃╱╱┃┃┃╰╯┃┃━┫┃┃┃╰┫┃━┫
+    ╰━━┻━━┻╯╰┻╯╱╱╰╯╰━━┻━━┻╯╰┻━┻━━╯*/
+    /* <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'> */
+    --Fuente-Principal: 'Quicksand';
+    /*Grosores*/
+    --Fuente-G-Regular: 400;
+    --Fuente-G-Medium: 500;
+    --Fuente-G-SemiBold: 600;
+    --Fuente-G-Bold: 700;
+    /*Tamaños*/
+    --Fuente-T-Display2XL: 7.2rem;
+    --Fuente-T-DisplayXL: 6rem;
+    --Fuente-T-DisplayLG: 4.8rem;
+    --Fuente-T-DisplayMD: 3.6rem;
+    --Fuente-T-DisplaySM: 2.4rem;
+    --Fuente-T-TextoXL: 2rem;
+    --Fuente-T-TextoLG: 1.6rem;
+    --Fuente-T-TextoMD: 1.2rem;
+    --Fuente-T-TextoSM: 8rem;
+
+    /*╱╱╱╱╭╮╱╭╮
+    ╱╱╱╱╱╭╯╰╮┃┃
+    ╭━━┳━┻╮╭╋┫┃╭━━┳━━╮
+    ┃┃━┫━━┫┃┣┫┃┃╭╮┃━━┫
+    ┃┃━╋━━┃╰┫┃╰┫╰╯┣━━┃
+    ╰━━┻━━┻━┻┻━┻━━┻━━╯*/
+    /*SOMBRAS*/
+    /*Aplicar con función 'filter:'*/
+    --Sombra-ExteriorXS-Negro: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25));
+    --Sombra-ExteriorSM-Negro: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25)) drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.25));
+    --Sombra-ExteriorMD-Negro: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+    --Sombra-ExteriorLG-Negro: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25)) drop-shadow(0px 12px 16px rgba(0, 0, 0, 0.25));
+    --Sombra-ExteriorXS-Prim-Azul: drop-shadow(0px 1px 2px #4F9BB9);
+    --Sombra-ExteriorSM-Prim-Azul: drop-shadow(0px 1px 2px #4F9BB9) drop-shadow(0px 1px 3px #4F9BB9);
+    --Sombra-ExteriorMD-Prim-Azul: drop-shadow(0px 2px 4px #4F9BB9) drop-shadow(0px 4px 8px rgba(79, 155, 185, 0.25));
+    --Sombra-ExteriorLG-Prim-Azul: drop-shadow(0px 4px 6px rgba(79, 155, 185, 0.25)) drop-shadow(0px 12px 16px rgba(79, 155, 185, 0.25));
+    --Sombra-ExteriorXS-Prim-Rojo: drop-shadow(0px 1px 2px #DD2222);
+    --Sombra-ExteriorSM-Prim-Rojo: drop-shadow(0px 1px 2px #DD2222) drop-shadow(0px 1px 3px #DD2222);
+    --Sombra-ExteriorMD-Prim-Rojo: drop-shadow(0px 2px 4px #DD2222) drop-shadow(0px 4px 8px rgba(221, 34, 34, 0.25));
+    --Sombra-ExteriorLG-Prim-Rojo: drop-shadow(0px 4px 6px rgba(221, 34, 34, 0.25)) drop-shadow(0px 12px 16px rgba(221, 34, 34, 0.25));
+    --Sombra-ExteriorXS-Prim-Verde: drop-shadow(0px 1px 2px #06E946);
+    --Sombra-ExteriorSM-Prim-Verde: drop-shadow(0px 1px 2px #06E946) drop-shadow(0px 1px 3px #06E946);
+    --Sombra-ExteriorMD-Prim-Verde: drop-shadow(0px 2px 4px #06E946) drop-shadow(0px 4px 8px #06E946);
+    --Sombra-ExteriorLG-Prim-Verde: drop-shadow(0px 4px 6px #06E946) drop-shadow(0px 12px 16px #06E946);
+    /*Aplicar con función 'box-shadow:'*/
+    --Sombra-InteriorXS-Negro: inset 0px 1px 2px rgba(0, 0, 0, 0.25);
+    --Sombra-InteriorSM-Negro: inset 0px 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 3px rgba(0, 0, 0, 0.25);
+    --Sombra-InteriorMD-Negro: inset 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 8px rgba(0, 0, 0, 0.25);
+    --Sombra-InteriorLG-Negro: inset 0px 4px 6px rgba(0, 0, 0, 0.25), inset 0px 12px 16px rgba(0, 0, 0, 0.25);
+
+    /*BORDE REDONDEADO*/
+    --Borde-r: 0.8rem;
+
+    /*ICONOS-TAMAÑO*/
+    --Icono-T24: 2.4rem;
+    --Icono-T32: 3.2rem;
+    --Icono-T40: 4rem;
+    --Icono-T48: 4.8rem;
+    --Icono-T56: 5.6rem;
+}
+
+/*━╮╱╱╱╱╱╱╱╱╭╮
+╱┃╭╯╱╱╱╱╱╱╱╭╯╰╮
+╭╯╰┳╮╭┳━━┳━╋╮╭╋━━┳━━╮
+╰╮╭┫┃┃┃┃━┫╭╮┫┃┃┃━┫━━┫
+╱┃┃┃╰╯┃┃━┫┃┃┃╰┫┃━╋━━┃
+╱╰╯╰━━┻━━┻╯╰┻━┻━━┻━━╯ */
+.-Display2XL\(Regular\) {
+    font-size: var(--Fuente-T-Display2XL);
+    font-weight: var(--Fuente-G-Regular);
+}
+
+.-Display2XL\(Medium\) {
+    font-size: var(--Fuente-T-Display2XL);
+    font-weight: var(--Fuente-G-Medium);
+}
+
+.-Display2XL\(SemiBold\) {
+    font-size: var(--Fuente-T-Display2XL);
+    font-weight: var(--Fuente-G-SemiBold);
+}
+
+.-Display2XL\(Bold\) {
+    font-size: var(--Fuente-T-Display2XL);
+    font-weight: var(--Fuente-G-Bold);
+}
+
+.-DisplayXL\(Regular\) {
+    font-size: var(--Fuente-T-DisplayXL);
+    font-weight: var(--Fuente-G-Regular);
+}
+
+.-DisplayXL\(Medium\) {
+    font-size: var(--Fuente-T-DisplayXL);
+    font-weight: var(--Fuente-G-Medium);
+}
+
+.-DisplayXL\(SemiBold\) {
+    font-size: var(--Fuente-T-DisplayXL);
+    font-weight: var(--Fuente-G-SemiBold);
+}
+
+.-DisplayXL\(Bold\) {
+    font-size: var(--Fuente-T-DisplayXL);
+    font-weight: var(--Fuente-G-Bold);
+}
+
+.-DisplayLG\(Regular\) {
+    font-size: var(--Fuente-T-DisplayLG);
+    font-weight: var(--Fuente-G-Regular);
+}
+
+.-DisplayLG\(Medium\) {
+    font-size: var(--Fuente-T-DisplayLG);
+    font-weight: var(--Fuente-G-Medium);
+}
+
+.-DisplayLG\(SemiBold\) {
+    font-size: var(--Fuente-T-DisplayLG);
+    font-weight: var(--Fuente-G-SemiBold);
+}
+
+.-DisplayLG\(Bold\) {
+    font-size: var(--Fuente-T-DisplayLG);
+    font-weight: var(--Fuente-G-Bold);
+}
+
+.-DisplayMD\(Regular\) {
+    font-size: var(--Fuente-T-DisplayMD);
+    font-weight: var(--Fuente-G-Regular);
+}
+
+.-DisplayMD\(Medium\) {
+    font-size: var(--Fuente-T-DisplayMD);
+    font-weight: var(--Fuente-G-Medium);
+}
+
+.-DisplayMD\(SemiBold\) {
+    font-size: var(--Fuente-T-DisplayMD);
+    font-weight: var(--Fuente-G-SemiBold);
+}
+
+.-DisplayMD\(Bold\) {
+    font-size: var(--Fuente-T-DisplayMD);
+    font-weight: var(--Fuente-G-Bold);
+}
+
+.-DisplaySM\(Regular\) {
+    font-size: var(--Fuente-T-DisplaySM);
+    font-weight: var(--Fuente-G-Regular);
+}
+
+.-DisplaySM\(Medium\) {
+    font-size: var(--Fuente-T-DisplaySM);
+    font-weight: var(--Fuente-G-Medium);
+}
+
+.-DisplaySM\(SemiBold\) {
+    font-size: var(--Fuente-T-DisplaySM);
+    font-weight: var(--Fuente-G-SemiBold);
+}
+
+.-DisplaySM\(Bold\) {
+    font-size: var(--Fuente-T-DisplaySM);
+    font-weight: var(--Fuente-G-Bold);
+}
+
+.-TextoXL\(Regular\) {
+    font-size: var(--Fuente-T-TextoXL);
+    font-weight: var(--Fuente-G-Regular);
+}
+
+.-TextoXL\(Medium\) {
+    font-size: var(--Fuente-T-TextoXL);
+    font-weight: var(--Fuente-G-Medium);
+}
+
+.-TextoXL\(SemiBold\) {
+    font-size: var(--Fuente-T-TextoXL);
+    font-weight: var(--Fuente-G-SemiBold);
+}
+
+.-TextoXL\(Bold\) {
+    font-size: var(--Fuente-T-TextoXL);
+    font-weight: var(--Fuente-G-Bold);
+}
+
+.-TextoLG\(Regular\) {
+    font-size: var(--Fuente-T-TextoLG);
+    font-weight: var(--Fuente-G-Regular);
+}
+
+.-TextoLG\(Medium\) {
+    font-size: var(--Fuente-T-TextoLG);
+    font-weight: var(--Fuente-G-Medium);
+}
+
+.-TextoLG\(SemiBold\) {
+    font-size: var(--Fuente-T-TextoLG);
+    font-weight: var(--Fuente-G-SemiBold);
+}
+
+.-TextoLG\(Bold\) {
+    font-size: var(--Fuente-T-TextoLG);
+    font-weight: var(--Fuente-G-Bold);
+}
+
+.-TextoMD\(Regular\) {
+    font-size: var(--Fuente-T-TextoMD);
+    font-weight: var(--Fuente-G-Regular);
+}
+
+.-TextoMD\(Medium\) {
+    font-size: var(--Fuente-T-TextoMD);
+    font-weight: var(--Fuente-G-Medium);
+}
+
+.-TextoMD\(SemiBold\) {
+    font-size: var(--Fuente-T-TextoMD);
+    font-weight: var(--Fuente-G-SemiBold);
+}
+
+.-TextoMD\(Bold\) {
+    font-size: var(--Fuente-T-TextoMD);
+    font-weight: var(--Fuente-G-Bold);
+}
+
+.-TextoSM\(Regular\) {
+    font-size: var(--Fuente-T-TextoSM);
+    font-weight: var(--Fuente-G-Regular);
+}
+
+.-TextoSM\(Medium\) {
+    font-size: var(--Fuente-T-TextoSM);
+    font-weight: var(--Fuente-G-Medium);
+}
+
+.-TextoSM\(SemiBold\) {
+    font-size: var(--Fuente-T-TextoSM);
+    font-weight: var(--Fuente-G-SemiBold);
+}
+
+.-TextoSM\(Bold\) {
+    font-size: var(--Fuente-T-TextoSM);
+    font-weight: var(--Fuente-G-Bold);
+}
+
+html {
+    box-sizing: border-box;
+    font-family: var(--Fuente-Principal);
+    font-size: 62.5%;
+    /** Reset para REMS - 62.5% = 10px de 16px **/
+    color: var(--Color-Prim-azul1);
+}
+
+body {
+    background-image: var(--Color-Extra-lingrad-azul23);
+}
+
+div {
+    background-color: white;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: var(--Borde-r);
+    margin: 100px auto;
+    box-shadow: var(--Sombra-InteriorLG-Negro);
+}
