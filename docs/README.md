@@ -110,7 +110,7 @@ Los 3 componentes que describen este patrón de diseño son:
 La arquitectura para el proyecto es la siguiente:
 
 ````
-```
+
 project
 |
 └───assets
@@ -147,7 +147,5 @@ project
 |
 |    .gitbook.yaml
 |    index.html
-```
-````
 
-\
+````
