@@ -10,8 +10,8 @@
 }
 
 .a-iconoSVG {
-    display: inline-block;
     fill: var(--Color-Prim-azul1);
+    display: inline-block;
     transition: all 300ms;
 }
 
