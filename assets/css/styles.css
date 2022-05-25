@@ -5,6 +5,7 @@
 *******************************************/
 @import "/assets/css/tokens/tokens.css";
 @import "/assets/css/atoms/iconos.css";
+@import "/assets/css/atoms/avatar.css";
 
 html {
     box-sizing: border-box;

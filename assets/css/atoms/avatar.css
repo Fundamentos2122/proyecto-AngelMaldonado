@@ -1,0 +1,35 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Tue May 24 2022
+*  File : avatar.css
+*******************************************/
+/* TODO: responsive */
+.a-avatarContenedor {
+    padding: 3.7rem;
+
+    display: inline-block;
+    width: 46rem;
+    height: 46rem;
+
+    position: relative;
+    background-color: var(--Color-Prim-azul3);
+    border-radius: 100%;
+
+    overflow: hidden;
+}
+
+.a-avatarFiltro {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Color-Prim-azul1);
+    opacity: 0.5;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.a-avatarContenedor:hover .a-avatarFiltro {
+    bottom: 0;
+}

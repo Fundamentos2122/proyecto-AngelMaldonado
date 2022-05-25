@@ -5,51 +5,72 @@
 *******************************************/
 @import "/assets/css/tokens/tokens.css";
 
-.a-iconoContenedor {
+/**
+ * Uso:
+ * <element class="a-icono__Contenedor">
+ *      <svg class="a-icono__svg -t[px] -[tipo]">
+ *          contenido del arhivo .svg
+ *      </svg>
+ * </element>
+ */
+
+.a-icono__Contenedor {
     display: inline-block;
 }
 
-.a-iconoSVG {
+/* 1 variante */
+.a-icono__svg {
     fill: var(--Color-Prim-azul1);
-    display: inline-block;
+}
+
+/* 2 variantes */
+.a-icono__svg>g>.-lleno {
+    opacity: 0.0;
+}
+
+.a-icono__svg>g>.-delineado {
+    opacity: 1.0;
+}
+
+.a-icono__svg.-activo {
     transition: all 300ms;
 }
 
-.a-iconoSVG.-clickeable {
-    cursor: pointer;
-}
-
-.a-iconoSVG.-deshabilitado {
-    fill: var(--Color-Sec-gris2);
-}
-
-.a-iconoSVG.-t24 {
+.a-icono__svg.-t24 {
     width: 24px;
     height: 24px;
 }
 
-.a-iconoSVG.-t32 {
+.a-icono__svg.-t32 {
     width: 32px;
     height: 32px;
 }
 
-.a-iconoSVG.-t40 {
+.a-icono__svg.-t40 {
     width: 40px;
     height: 40px;
 }
 
-.a-iconoSVG.-t48 {
+.a-icono__svg.-t48 {
     width: 48px;
     height: 48px;
 }
 
-.a-iconoSVG.-t56 {
+.a-icono__svg.-t56 {
     width: 56px;
     height: 56px;
 }
 
-.a-iconoSVG.-clickeable:hover {
+/* 1 variante */
+.a-icono__svg.-activo:hover {
     fill: var(--Color-Prim-verde1);
 }
 
-/* TODO: checar https://coderwall.com/p/lqjd1w/css-class-inheritance-in-css */
+/* 2 variantes */
+.a-icono__svg.-activo:hover>g>.-delineado {
+    opacity: 0.0;
+}
+
+.a-icono__svg.-activo:hover>g>.-lleno {
+    opacity: 1.0;
+}
