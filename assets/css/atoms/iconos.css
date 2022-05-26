@@ -37,28 +37,28 @@
 }
 
 .a-icono__svg.-t24 {
-    width: 24px;
-    height: 24px;
+    width: var(--Icono-T24);
+    height: var(--Icono-T24);
 }
 
 .a-icono__svg.-t32 {
-    width: 32px;
-    height: 32px;
+    width: var(--Icono-T32);
+    height: var(--Icono-T32);
 }
 
 .a-icono__svg.-t40 {
-    width: 40px;
-    height: 40px;
+    width: var(--Icono-T40);
+    height: var(--Icono-T40);
 }
 
 .a-icono__svg.-t48 {
-    width: 48px;
-    height: 48px;
+    width: var(--Icono-T48);
+    height: var(--Icono-T48);
 }
 
 .a-icono__svg.-t56 {
-    width: 56px;
-    height: 56px;
+    width: var(--Icono-T56);
+    height: var(--Icono-T56);
 }
 
 /* 1 variante */
