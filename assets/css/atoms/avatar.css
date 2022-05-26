@@ -3,33 +3,140 @@
 *  Created On : Tue May 24 2022
 *  File : avatar.css
 *******************************************/
-/* TODO: responsive */
-.a-avatarContenedor {
-    padding: 3.7rem;
+@import url(/assets/css/tokens/tokens.css);
 
-    display: inline-block;
-    width: 46rem;
-    height: 46rem;
+/**
+ * Uso:
+    (perfil)
+    <div class="a-avatar -img">
+        <!-- <svg class="a-icono__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="usuario-vector">
+                <path
+                    d="M12 4.5C13.375 4.5 14.5 5.625 14.5 7C14.5 8.375 13.375 9.5 12 9.5C10.625 9.5 9.5 8.375 9.5 7C9.5 5.625 10.625 4.5 12 4.5ZM12 17C15.375 17 19.25 18.6125 19.5 19.5H4.5C4.7875 18.6 8.6375 17 12 17ZM12 2C9.2375 2 7 4.2375 7 7C7 9.7625 9.2375 12 12 12C14.7625 12 17 9.7625 17 7C17 4.2375 14.7625 2 12 2ZM12 14.5C8.6625 14.5 2 16.175 2 19.5V22H22V19.5C22 16.175 15.3375 14.5 12 14.5Z" />
+            </g>
+        </svg> -->
+        <a href="/" class="a-avatar__Filtro">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="editar-vector">
+                    <path
+                        d="M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04V7.04Z" />
+                </g>
+            </svg>
+        </a>
+    </div>
 
+    (icono)
+
+    <div class="a-avatar -t56">
+        <svg class="a-icono__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="usuario-vector">
+                <path
+                    d="M12 4.5C13.375 4.5 14.5 5.625 14.5 7C14.5 8.375 13.375 9.5 12 9.5C10.625 9.5 9.5 8.375 9.5 7C9.5 5.625 10.625 4.5 12 4.5ZM12 17C15.375 17 19.25 18.6125 19.5 19.5H4.5C4.7875 18.6 8.6375 17 12 17ZM12 2C9.2375 2 7 4.2375 7 7C7 9.7625 9.2375 12 12 12C14.7625 12 17 9.7625 17 7C17 4.2375 14.7625 2 12 2ZM12 14.5C8.6625 14.5 2 16.175 2 19.5V22H22V19.5C22 16.175 15.3375 14.5 12 14.5Z" />
+            </g>
+        </svg>
+        <a href="/" class="a-avatar__Filtro"></a>
+    </div>
+ */
+
+.a-avatar {
     position: relative;
+
     background-color: var(--Color-Prim-azul3);
-    border-radius: 100%;
+    border-radius: 50%;
 
     overflow: hidden;
 }
 
-.a-avatarFiltro {
+.a-avatar.-img {
+    background-image: url(https://i.pravatar.cc/);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.a-avatar:after {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+}
+
+.a-avatar>.a-icono__svg {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 60%;
+}
+
+.a-avatar {
+    max-width: 36rem;
+}
+
+.a-avatar.-t24 {
+    width: var(--Icono-T24);
+}
+
+.a-avatar.-t32 {
+    width: var(--Icono-T32);
+}
+
+.a-avatar.-t40 {
+    width: var(--Icono-T40);
+}
+
+.a-avatar.-t48 {
+    width: var(--Icono-T48);
+}
+
+.a-avatar.-t56 {
+    width: var(--Icono-T56);
+}
+
+@media screen and (max-width: 550px) {
+    .a-avatar {
+        max-width: 25.6rem;
+    }
+}
+
+.a-avatar__Filtro {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     bottom: -100%;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     background-color: var(--Color-Prim-azul1);
     opacity: 0.5;
+    border-radius: inherit;
+
     transition: all 0.3s;
     cursor: pointer;
 }
 
-.a-avatarContenedor:hover .a-avatarFiltro {
+.a-avatar__Filtro>svg {
+    width: 15%;
+
+    fill: var(--Color-Prim-verde1);
+    opacity: 1.0;
+}
+
+.a-avatar:hover .a-avatar__Filtro {
     bottom: 0;
+}
+
+.a-avatar:hover {
+    filter: var(--Sombra-ExteriorMD-Negro);
+}
+
+.a-avatar.-t24,
+.a-avatar.a-avatar.-t32,
+.a-avatar.-t40,
+.a-avatar.-t48,
+.a-avatar.-t56:hover {
+    filter: var(--Sombra-ExteriorSM-Prim-Verde);
 }
