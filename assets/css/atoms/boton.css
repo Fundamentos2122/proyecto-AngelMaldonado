@@ -1,0 +1,166 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Sat May 28 2022
+*  File : boton.css
+*******************************************/
+@import "/assets/css/tokens/tokens.css";
+
+/**
+ * Uso:
+<botton class="a-boton -principal">Botón</botton>
+<a class="a-boton -amarillo">Botón</a>
+<a href="/" class="a-boton -texto">
+    Botón
+    <svg class="a-icono__svg -t24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="usuario-vector">
+            <path class="-lleno"
+                d="M12 12C14.7625 12 17 9.7625 17 7C17 4.2375 14.7625 2 12 2C9.2375 2 7 4.2375 7 7C7 9.7625 9.2375 12 12 12ZM12 14.5C8.6625 14.5 2 16.175 2 19.5V22H22V19.5C22 16.175 15.3375 14.5 12 14.5Z" />
+            <path class="-delineado"
+                d="M12 4.5C13.375 4.5 14.5 5.625 14.5 7C14.5 8.375 13.375 9.5 12 9.5C10.625 9.5 9.5 8.375 9.5 7C9.5 5.625 10.625 4.5 12 4.5ZM12 17C15.375 17 19.25 18.6125 19.5 19.5H4.5C4.7875 18.6 8.6375 17 12 17ZM12 2C9.2375 2 7 4.2375 7 7C7 9.7625 9.2375 12 12 12C14.7625 12 17 9.7625 17 7C17 4.2375 14.7625 2 12 2ZM12 14.5C8.6625 14.5 2 16.175 2 19.5V22H22V19.5C22 16.175 15.3375 14.5 12 14.5Z" />
+        </g>
+    </svg>
+</a>
+ */
+
+.a-boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    max-width: calc(46rem - 2rem);
+    height: calc(5rem - 2rem);
+
+    color: var(--Color-Prim-azul1);
+    font-size: var(--Fuente-T-DisplaySM);
+    font-weight: var(--Fuente-G-Regular);
+    text-decoration: none;
+
+    border: none;
+    border-radius: var(--Borde-r);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.a-boton.-texto {
+    display: inline-flex;
+    position: relative;
+    gap: 0.8rem;
+}
+
+.a-boton.-texto:after {
+    content: "";
+    position: absolute;
+    bottom: calc(50% - 2rem);
+
+    width: calc(100% - 2rem);
+    height: 3.5%;
+
+    background-color: var(--Color-Prim-azul1);
+
+    border-radius: inherit;
+    transform: scale(0, 1);
+    transition: inherit;
+}
+
+.a-boton.-texto:hover {
+    color: var(--Color-Prim-verde1);
+}
+
+.a-boton.-texto:hover svg {
+    fill: var(--Color-Prim-verde1);
+}
+
+.a-boton.-texto:hover:after {
+    background-color: var(--Color-Prim-verde1);
+
+    transform: scale(1, 1);
+}
+
+.a-boton.-texto:active {
+    color: var(--Color-Prim-verde3);
+    background-color: var(--Color-Prim-verde1);
+}
+
+.a-boton.-texto:active:after {
+    background-color: var(--Color-Prim-verde3);
+}
+
+.a-boton.-texto:active svg {
+    fill: var(--Color-Prim-verde3);
+}
+
+.a-boton.-texto:active>svg>g>.-delineado {
+    opacity: 0.0;
+}
+
+.a-boton.-texto:active>svg>g>.-lleno {
+    opacity: 1.0;
+}
+
+.a-boton.-amarillo {
+    background-color: var(--Color-Prim-amarillo1);
+    color: var(--Color-Prim-amarillo3);
+}
+
+.a-boton.-amarillo:hover {
+    color: var(--Color-Prim-amarillo1);
+    background-color: var(--Color-Prim-amarillo3);
+}
+
+.a-boton.-rojo {
+    background-color: var(--Color-Prim-rojo1);
+    color: var(--Color-Blanco);
+}
+
+.a-boton.-rojo:hover {
+    background-color: var(--Color-Prim-rojo3);
+}
+
+.a-boton.-secundario {
+    padding: calc(1rem - 4px);
+
+    color: var(--Color-Prim-verde1);
+    background-color: none;
+    border: 4px solid var(--Color-Prim-verde1);
+}
+
+.a-boton.-secundario:hover {
+    background-color: var(--Color-Prim-verde3);
+}
+
+.a-boton.-secundario:active {
+    color: var(--Color-Sec-morado1);
+    border-color: var(--Color-Sec-morado1);
+    background-color: var(--Color-Sec-morado3);
+}
+
+.a-boton.-principal {
+    color: var(--Color-Prim-azul3);
+    background-color: var(--Color-Prim-azul1);
+}
+
+.a-boton.-principal:hover {
+    background-color: var(--Color-Prim-azul2);
+}
+
+.a-boton.-principal:active {
+    background-color: var(--Color-Prim-verde1);
+}
+
+.a-boton:active {
+    box-shadow: var(--Sombra-InteriorMD-Negro);
+}
+
+@media screen and (max-width: 550px) {
+    .a-boton {
+        max-width: calc(33.6rem - 2rem);
+        height: calc(5rem - 2rem);
+    }
+}
+
+.a-boton.-deshabilitado {
+    color: var(--Color-Prim-gris3);
+    background-color: var(--Color-Prim-gris1);
+    cursor: default;
+}
