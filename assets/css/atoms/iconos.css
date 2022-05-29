@@ -7,14 +7,14 @@
 
 /**
  * Uso:
- * <element class="a-icono__Contenedor">
+ * <element class="a-icono__contenedor">
  *      <svg class="a-icono__svg -t[px] -[tipo]">
  *          contenido del arhivo .svg
  *      </svg>
  * </element>
  */
 
-.a-icono__Contenedor {
+.a-icono__contenedor {
     display: inline-block;
 }
 
@@ -34,31 +34,6 @@
 
 .a-icono__svg.-activo {
     transition: all 300ms;
-}
-
-.a-icono__svg.-t24 {
-    width: var(--Icono-T24);
-    height: var(--Icono-T24);
-}
-
-.a-icono__svg.-t32 {
-    width: var(--Icono-T32);
-    height: var(--Icono-T32);
-}
-
-.a-icono__svg.-t40 {
-    width: var(--Icono-T40);
-    height: var(--Icono-T40);
-}
-
-.a-icono__svg.-t48 {
-    width: var(--Icono-T48);
-    height: var(--Icono-T48);
-}
-
-.a-icono__svg.-t56 {
-    width: var(--Icono-T56);
-    height: var(--Icono-T56);
 }
 
 /* 1 variante */

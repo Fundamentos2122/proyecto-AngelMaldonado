@@ -39,12 +39,12 @@
  */
 
 .a-avatar {
-    position: relative;
+    max-width: 36rem;
 
     background-color: var(--Color-Prim-azul3);
     border-radius: 50%;
 
-    overflow: hidden;
+    cursor: pointer;
 }
 
 .a-avatar.-img {
@@ -69,74 +69,8 @@
     width: 60%;
 }
 
-.a-avatar {
-    max-width: 36rem;
-}
-
-.a-avatar.-t24 {
-    width: var(--Icono-T24);
-}
-
-.a-avatar.-t32 {
-    width: var(--Icono-T32);
-}
-
-.a-avatar.-t40 {
-    width: var(--Icono-T40);
-}
-
-.a-avatar.-t48 {
-    width: var(--Icono-T48);
-}
-
-.a-avatar.-t56 {
-    width: var(--Icono-T56);
-}
-
 @media screen and (max-width: 550px) {
     .a-avatar {
         max-width: 25.6rem;
     }
-}
-
-.a-avatar__Filtro {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: -100%;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: var(--Color-Prim-azul1);
-    opacity: 0.5;
-    border-radius: inherit;
-
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.a-avatar__Filtro>svg {
-    width: 15%;
-
-    fill: var(--Color-Prim-verde1);
-    opacity: 1.0;
-}
-
-.a-avatar:hover .a-avatar__Filtro {
-    bottom: 0;
-}
-
-.a-avatar:hover {
-    filter: var(--Sombra-ExteriorMD-Negro);
-}
-
-.a-avatar.-t24,
-.a-avatar.a-avatar.-t32,
-.a-avatar.-t40,
-.a-avatar.-t48,
-.a-avatar.-t56:hover {
-    filter: var(--Sombra-ExteriorSM-Prim-Verde);
 }

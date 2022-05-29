@@ -6,6 +6,7 @@
 @import "/assets/css/tokens/tokens.css";
 @import "/assets/css/atoms/iconos.css";
 @import "/assets/css/atoms/avatar.css";
+@import "/assets/css/atoms/card.css";
 
 html {
     box-sizing: border-box;
@@ -15,15 +16,8 @@ html {
     color: var(--Color-Prim-azul1);
 }
 
+html,
 body {
-    background-image: var(--Color-Extra-lingrad-azul23);
+    margin: 0;
+    /* background-image: var(--Color-Extra-lingrad-azul23); */
 }
-
-/* div {
-    background-color: white;
-    width: 50%;
-    border: 1px solid black;
-    border-radius: var(--Borde-r);
-    margin: 100px auto;
-    box-shadow: var(--Sombra-InteriorLG-Negro);
-} */

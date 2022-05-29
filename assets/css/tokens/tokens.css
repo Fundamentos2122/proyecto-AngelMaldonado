@@ -289,3 +289,89 @@
     font-size: var(--Fuente-T-TextoSM);
     font-weight: var(--Fuente-G-Bold);
 }
+
+
+/*╮
+╭╯╰╮
+╰╮╭╋━━┳╮╭┳━━┳━╮╭━━┳━━╮
+╱┃┃┃╭╮┃╰╯┃╭╮┃╭╮┫╭╮┃━━┫
+╱┃╰┫╭╮┃┃┃┃╭╮┃┃┃┃╰╯┣━━┃
+╱╰━┻╯╰┻┻┻┻╯╰┻╯╰┻━━┻━━╯*/
+.-t24 {
+    width: var(--Icono-T24);
+    height: var(--Icono-T24);
+}
+
+.-t32 {
+    width: var(--Icono-T32);
+    height: var(--Icono-T32);
+}
+
+.-t40 {
+    width: var(--Icono-T40);
+    height: var(--Icono-T40);
+}
+
+.-t48 {
+    width: var(--Icono-T48);
+    height: var(--Icono-T48);
+}
+
+.-t56 {
+    width: var(--Icono-T56);
+    height: var(--Icono-T56);
+}
+
+/*╱╱╭━╮╱╱╱╱╱╭╮
+╱╱╱╱┃╭╯╱╱╱╱╭╯╰╮
+╭━━┳╯╰┳━━┳━┻╮╭╋━━┳━━╮
+┃┃━╋╮╭┫┃━┫╭━┫┃┃╭╮┃━━┫
+┃┃━┫┃┃┃┃━┫╰━┫╰┫╰╯┣━━┃
+╰━━╯╰╯╰━━┻━━┻━┻━━┻━━╯*/
+.-ef\(sombraEXMD-Negro\) {
+    filter: var(--Sombra-ExteriorMD-Negro);
+}
+
+/*HOVER*/
+.-efHover\(filtro\) {
+    position: relative;
+    overflow: hidden;
+}
+
+.-efHover\(filtro\)>.-\(filtro\) {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -100%;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--Color-Prim-azul1);
+    opacity: 0.5;
+    border-radius: inherit;
+
+    transition: all 0.3s;
+    cursor: inherit;
+}
+
+.-efHover\(filtro\)>.-\(filtro\)>svg {
+    width: 15%;
+
+    fill: var(--Color-Prim-verde1);
+    opacity: 1.0;
+}
+
+.-efHover\(filtro\):hover .-\(filtro\) {
+    bottom: 0;
+}
+
+.-efHover\(sombraEXMD-Negro\):hover {
+    filter: var(--Sombra-ExteriorMD-Negro);
+}
+
+.-efHover\(sombraEXSM-PVerde\):hover {
+    filter: var(--Sombra-ExteriorSM-Prim-Verde);
+}
