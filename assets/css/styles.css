@@ -4,10 +4,14 @@
 *  File : styles.css
 *******************************************/
 @import "/assets/css/tokens/tokens.css";
+/* ATOMOS */
 @import "/assets/css/atoms/iconos.css";
 @import "/assets/css/atoms/avatar.css";
 @import "/assets/css/atoms/card.css";
 @import "/assets/css/atoms/boton.css";
+/* MOLECULAS */
+@import "/assets/css/molecules/menu.css";
+@import "/assets/css/molecules/calificador.css";
 
 html {
     box-sizing: border-box;

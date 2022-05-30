@@ -1,0 +1,76 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Sun May 29 2022
+*  File : menu.css
+*******************************************/
+
+/**
+ * Uso:
+<div class="m-menu -categorias">
+    <a href="/" class="a-card__contenido -categoria"><span>Categoría</span></a>
+    <a href="/" class="a-card__contenido -categoria"><span>Categoría</span></a>
+    <a href="/" class="a-card__contenido -categoria"><span>Categoría</span></a>
+</div>
+
+<div class="m-menu -slides">
+    <a href="/" class="a-icono__contenedor">
+        <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="boton-radio-slides-vector">
+                <path class="-delineado"
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                <circle class="-lleno" cx="12" cy="12" r="10" />
+            </g>
+        </svg>
+    </a>
+    <a href="/" class="a-icono__contenedor">
+        <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="boton-radio-slides-vector">
+                <path class="-delineado"
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                <circle class="-lleno" cx="12" cy="12" r="10" />
+            </g>
+        </svg>
+    </a>
+    <a href="/" class="a-icono__contenedor">
+        <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="boton-radio-slides-vector">
+                <path class="-delineado"
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                <circle class="-lleno" cx="12" cy="12" r="10" />
+            </g>
+        </svg>
+    </a>
+</div>
+ */
+
+.m-menu {
+    display: flex;
+}
+
+.m-menu.-categorias {
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+@media screen and (max-width: 550px) {
+    .m-menu.-categorias {
+        flex-direction: row;
+    }
+}
+
+.m-menu.-slides {
+    display: inline-flex;
+    gap: 2rem;
+}
+
+.m-menu.-slides>.a-icono__contenedor {
+    width: var(--Icono-T40);
+    height: var(--Icono-T40);
+}
+
+@media screen and (max-width: 550px) {
+    .m-menu.-slides>.a-icono__contenedor {
+        width: var(--Icono-T32);
+        height: var(--Icono-T32);
+    }
+}

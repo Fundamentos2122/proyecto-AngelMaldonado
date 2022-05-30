@@ -143,6 +143,7 @@
 .a-card__contenido.-categoria {
     display: flex;
     align-items: center;
+    flex: auto;
 
     max-width: 8.8rem;
     min-height: 8.8rem;
@@ -155,13 +156,13 @@
     .a-card__contenido.-categoria {
         flex-direction: column;
 
-        max-width: 6.4rem;
-        min-height: 6.4rem;
+        width: 6.4rem;
+        height: 6.4rem;
     }
 
     .a-card__contenido.-categoria:hover {
-        max-width: 8.8rem;
-        min-height: 8.8rem;
+        width: 8.8rem;
+        height: 8.8rem;
 
         overflow: visible;
     }

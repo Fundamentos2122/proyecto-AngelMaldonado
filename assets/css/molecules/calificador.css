@@ -1,0 +1,96 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Sun May 29 2022
+*  File : calificador.css
+*******************************************/
+@import "/assets/css/tokens/tokens.css";
+
+/**
+ * Uso:
+<div class="m-calificador">
+    <input type="radio" name="estrella" id="rc1">
+    <label for="estrella">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="estrella">
+                <path id="estrella-vector"
+                    d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+            </g>
+        </svg>
+    </label>
+    <input type="radio" name="estrella" id="rc2">
+    <label for="estrella">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="estrella">
+                <path id="estrella-vector"
+                    d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+            </g>
+        </svg>
+    </label>
+    <input type="radio" name="estrella" id="rc3">
+    <label for="estrella">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="estrella">
+                <path id="estrella-vector"
+                    d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+            </g>
+        </svg>
+    </label>
+    <input type="radio" name="estrella" id="rc4">
+    <label for="estrella">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="estrella">
+                <path id="estrella-vector"
+                    d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+            </g>
+        </svg>
+    </label>
+    <input type="radio" name="estrella" id="rc5">
+    <label for="estrella">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="estrella">
+                <path id="estrella-vector"
+                    d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+            </g>
+        </svg>
+    </label>
+</div>
+ */
+
+.m-calificador {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.m-calificador>label {
+    position: relative;
+
+    cursor: pointer;
+}
+
+.m-calificador>input {
+    display: none;
+}
+
+.m-calificador>label>svg {
+    width: var(--Icono-T24);
+    height: var(--Icono-T24);
+}
+
+.m-calificador>label>svg>g>path {
+    fill: none;
+    stroke: var(--Color-Prim-gris3);
+    stroke-width: 0.2rem;
+}
+
+.m-calificador>input:checked~label>svg>g>path,
+.m-calificador>input:checked~label~label>svg>g>path {
+    stroke: var(--Color-Sec-amarillo1);
+    fill: var(--Color-Sec-amarillo1);
+}
+
+.m-calificador>input:not(:checked)~label:hover svg>g>path,
+.m-calificador>input:not(:checked)~label:hover~label>svg>g>path {
+    stroke: var(--Color-Prim-amarillo1);
+    fill: var(--Color-Prim-amarillo1);
+}

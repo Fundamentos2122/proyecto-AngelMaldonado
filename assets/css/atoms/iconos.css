@@ -7,15 +7,17 @@
 
 /**
  * Uso:
- * <element class="a-icono__contenedor">
- *      <svg class="a-icono__svg -t[px] -[tipo]">
- *          contenido del arhivo .svg
- *      </svg>
- * </element>
+<element class="a-icono__contenedor">
+     <svg class="a-icono__svg -t[px] -[tipo]">
+         contenido del arhivo .svg
+     </svg>
+</element>
  */
 
 .a-icono__contenedor {
     display: inline-block;
+
+    text-decoration: none;
 }
 
 /* 1 variante */
