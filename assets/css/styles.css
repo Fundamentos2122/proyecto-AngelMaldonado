@@ -10,8 +10,8 @@
 @import "/assets/css/atoms/card.css";
 @import "/assets/css/atoms/boton.css";
 /* MOLECULAS */
-@import "/assets/css/molecules/menu.css";
-@import "/assets/css/molecules/calificador.css";
+@import "/assets/css/molecules/control.css";
+
 
 html {
     box-sizing: border-box;

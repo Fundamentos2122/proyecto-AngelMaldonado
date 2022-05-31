@@ -38,6 +38,10 @@
     transition: all 300ms;
 }
 
+.a-icono__svg.-deshabilitado {
+    fill: var(--Color-Prim-gris3);
+}
+
 /* 1 variante */
 .a-icono__svg.-activo:hover {
     fill: var(--Color-Prim-verde1);

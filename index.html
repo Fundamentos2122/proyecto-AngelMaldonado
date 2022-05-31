@@ -19,52 +19,29 @@
 </head>
 
 <body>
-    <div class="m-calificador">
-        <input type="radio" name="estrella" id="rc1">
-        <label for="estrella">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="estrella">
-                    <path id="estrella-vector"
-                        d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+    <div class="m-control -numerico">
+        <a onclick="m_control__numerico__actualiza(this)" class="a-icono__contenedor -menos">
+            <svg class="a-icono__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="menos-vector">
+                    <path class="-lleno"
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 13H7V11H17V13Z" />
+                    <path class="-delineado"
+                        d="M7 11V13H17V11H7ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" />
                 </g>
             </svg>
-        </label>
-        <input type="radio" name="estrella" id="rc2">
-        <label for="estrella">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="estrella">
-                    <path id="estrella-vector"
-                        d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+        </a>
+        <input type="number" min="1" max="100" step="1" value="1" id="control-numerico"
+            onchange="m_control__numerico__actualiza_botones(this)">
+        <a onclick="m_control__numerico__actualiza(this)" class="a-icono__contenedor -mas">
+            <svg class="a-icono__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="mas-vector">
+                    <path class="-delineado"
+                        d="M13 7H11V11H7V13H11V17H13V13H17V11H13V7ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" />
+                    <path class="-lleno"
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 13H13V17H11V13H7V11H11V7H13V11H17V13Z" />
                 </g>
             </svg>
-        </label>
-        <input type="radio" name="estrella" id="rc3">
-        <label for="estrella">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="estrella">
-                    <path id="estrella-vector"
-                        d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
-                </g>
-            </svg>
-        </label>
-        <input type="radio" name="estrella" id="rc4">
-        <label for="estrella">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="estrella">
-                    <path id="estrella-vector"
-                        d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
-                </g>
-            </svg>
-        </label>
-        <input type="radio" name="estrella" id="rc5">
-        <label for="estrella">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="estrella">
-                    <path id="estrella-vector"
-                        d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
-                </g>
-            </svg>
-        </label>
+        </a>
     </div>
 </body>
 

@@ -1,0 +1,217 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Mon May 30 2022
+*  File : control.css
+*******************************************/
+@import "/assets/css/tokens/tokens.css";
+
+/**
+ * Uso:
+<div class="m-calificador">
+    <input type="radio" name="estrella" id="rc1">
+    <label for="estrella">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="estrella">
+                <path id="estrella-vector"
+                    d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+            </g>
+        </svg>
+    </label>
+    <input type="radio" name="estrella" id="rc2">
+    <label for="estrella">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="estrella">
+                <path id="estrella-vector"
+                    d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+            </g>
+        </svg>
+    </label>
+    <input type="radio" name="estrella" id="rc3">
+    <label for="estrella">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="estrella">
+                <path id="estrella-vector"
+                    d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+            </g>
+        </svg>
+    </label>
+    <input type="radio" name="estrella" id="rc4">
+    <label for="estrella">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="estrella">
+                <path id="estrella-vector"
+                    d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+            </g>
+        </svg>
+    </label>
+    <input type="radio" name="estrella" id="rc5">
+    <label for="estrella">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="estrella">
+                <path id="estrella-vector"
+                    d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+            </g>
+        </svg>
+    </label>
+</div>
+ */
+
+.m-control {
+    display: flex;
+}
+
+.m-control.-calificador {
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.m-control.-calificador>label {
+    position: relative;
+
+    cursor: pointer;
+}
+
+.m-control.-calificador>input {
+    display: none;
+}
+
+.m-control.-calificador>label>svg {
+    width: var(--Icono-T24);
+    height: var(--Icono-T24);
+}
+
+.m-control.-calificador>label>svg>g>path {
+    fill: none;
+    stroke: var(--Color-Prim-gris3);
+    stroke-width: 0.2rem;
+}
+
+.m-control.-calificador>input:checked~label>svg>g>path,
+.m-control.-calificador>input:checked~label~label>svg>g>path {
+    stroke: var(--Color-Sec-amarillo1);
+    fill: var(--Color-Sec-amarillo1);
+}
+
+.m-control.-calificador>input:not(:checked)~label:hover svg>g>path,
+.m-control.-calificador>input:not(:checked)~label:hover~label>svg>g>path {
+    stroke: var(--Color-Prim-amarillo1);
+    fill: var(--Color-Prim-amarillo1);
+}
+
+/**
+ * Uso:
+<div class="m-menu -menuCategorias">
+    <a href="/" class="a-card__contenido -categoria"><span>Categoría</span></a>
+    <a href="/" class="a-card__contenido -categoria"><span>Categoría</span></a>
+    <a href="/" class="a-card__contenido -categoria"><span>Categoría</span></a>
+</div>
+
+<div class="m-menu -menuSlides">
+    <a href="/" class="a-icono__contenedor">
+        <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="boton-radio-menuSlides-vector">
+                <path class="-delineado"
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                <circle class="-lleno" cx="12" cy="12" r="10" />
+            </g>
+        </svg>
+    </a>
+    <a href="/" class="a-icono__contenedor">
+        <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="boton-radio-menuSlides-vector">
+                <path class="-delineado"
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                <circle class="-lleno" cx="12" cy="12" r="10" />
+            </g>
+        </svg>
+    </a>
+    <a href="/" class="a-icono__contenedor">
+        <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="boton-radio-menuSlides-vector">
+                <path class="-delineado"
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                <circle class="-lleno" cx="12" cy="12" r="10" />
+            </g>
+        </svg>
+    </a>
+</div>
+ */
+
+.m-control.-menuCategorias {
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+@media screen and (max-width: 550px) {
+    .m-control.-menuCategorias {
+        flex-direction: row;
+    }
+}
+
+.m-control.-menuSlides {
+    display: inline-flex;
+    gap: 2rem;
+}
+
+.m-control.-menuSlides>.a-icono__contenedor {
+    width: var(--Icono-T40);
+    height: var(--Icono-T40);
+}
+
+@media screen and (max-width: 550px) {
+    .m-control.-menuSlides>.a-icono__contenedor {
+        width: var(--Icono-T32);
+        height: var(--Icono-T32);
+    }
+}
+
+.m-control.-numerico {
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-control.-numerico>#control-numerico {
+    width: 9rem;
+    height: 3.2rem;
+
+    color: var(--Color-Prim-azul1);
+    font-size: var(--Fuente-T-TextoXL);
+    font-weight: var(--Fuente-G-Medium);
+    text-align: center;
+
+    border: none;
+    border-radius: var(--Borde-r);
+}
+
+.m-control.m-control.-numerico>.a-icono__contenedor {
+    width: var(--Icono-T40);
+    height: var(--Icono-T40);
+}
+
+@media screen and (max-width: 550px) {
+    .m-control.-numerico>#control-numerico {
+        width: 8.5rem;
+        height: 2.4rem;
+
+        font-size: var(--Fuente-T-TextoLG);
+        font-weight: var(--Fuente-G-Medium);
+    }
+
+    .m-control.-numerico>.a-icono__contenedor {
+        width: var(--Icono-T32);
+        height: var(--Icono-T32);
+    }
+}
+
+.m-control.-numerico>#control-numerico:focus {
+    border: none;
+    outline: none;
+    filter: var(--Sombra-ExteriorMD-Prim-Azul);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
