@@ -3,7 +3,7 @@
 *  Created On : Mon May 30 2022
 *  File : control.css
 *******************************************/
-@import "/assets/css/tokens/tokens.css";
+@import "/assets/components/tokens/tokens.css";
 
 /**
  * Uso:
@@ -106,7 +106,7 @@
     <a href="/" class="a-card__contenido -categoria"><span>Categoría</span></a>
 </div>
 
-<div class="m-menu -menuSlides">
+<div class="m-control -menuSlides">
     <a href="/" class="a-icono__contenedor">
         <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="boton-radio-menuSlides-vector">

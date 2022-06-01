@@ -1,0 +1,120 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Wed Jun 01 2022
+*  File : slider.css
+*******************************************/
+@import "/assets/components/tokens/tokens.css";
+
+/**
+ * Uso:
+<div class="o-slider__contenedor">
+    <div class="-slider">
+        <div class="-slides">
+            <div id="slides__1" class="a-card__pantalla -slide">
+            </div>
+            <div id="slides__2" class="a-card__pantalla -slide">
+            </div>
+            <div id="slides__3" class="a-card__pantalla -slide">
+            </div>
+            <div id="slides__4" class="a-card__pantalla -slide">
+            </div>
+        </div>
+        <div class="m-control -menuSlides">
+            <a href="#slides__1" class="a-icono__contenedor">
+                <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="boton-radio-menuSlides-vector">
+                        <path class="-delineado"
+                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                        <circle class="-lleno" cx="12" cy="12" r="10" />
+                    </g>
+                </svg>
+            </a>
+            <a href="#slides__2" class="a-icono__contenedor">
+                <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="boton-radio-menuSlides-vector">
+                        <path class="-delineado"
+                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                        <circle class="-lleno" cx="12" cy="12" r="10" />
+                    </g>
+                </svg>
+            </a>
+            <a href="#slides__3" class="a-icono__contenedor">
+                <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="boton-radio-menuSlides-vector">
+                        <path class="-delineado"
+                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                        <circle class="-lleno" cx="12" cy="12" r="10" />
+                    </g>
+                </svg>
+            </a>
+            <a href="#slides__4" class="a-icono__contenedor">
+                <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="boton-radio-menuSlides-vector">
+                        <path class="-delineado"
+                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                        <circle class="-lleno" cx="12" cy="12" r="10" />
+                    </g>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+ */
+
+.o-slider__contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: fit-content;
+}
+
+.o-slider__contenedor>.-slider {
+    width: 100%;
+    height: 90vh;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.o-slider__contenedor>.-slider>.-slides {
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.o-slider__contenedor>.-slider>.-slides>.-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    width: 100%;
+    height: 100%;
+
+    scroll-snap-align: center;
+    transform-origin: center center;
+    transform: scale(1);
+}
+
+.o-slider__contenedor>.-slider::before,
+.o-slider__contenedor>.-slider::after {
+    content: "";
+    z-index: 1;
+    background: none;
+    pointer-events: none;
+}
+
+.o-slider__contenedor>.-slider>.m-control.-menuSlides {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+}

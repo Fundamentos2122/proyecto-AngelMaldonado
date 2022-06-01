@@ -13,6 +13,8 @@
 @import "/assets/components/molecules/control.css";
 @import "/assets/components/molecules/entrada.css";
 @import "/assets/components/molecules/card.css";
+/* ORGANISMOS */
+@import "/assets/components/organisms/slider.css";
 
 
 html {
