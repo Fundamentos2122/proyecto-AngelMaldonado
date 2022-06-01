@@ -7,6 +7,7 @@
 
 /**
  * Uso:
+ * TODO: Rotación del icono del dropdown *
 <div class="m-entrada__contenedor">
     <input type="text" id="texto" required>
     <label for="text">Texto</label>
@@ -42,6 +43,25 @@
         </a>
     </div>
 </div>
+<div class="m-entrada__contenedor">
+    <select class="-control -icono" name="combo-box">
+        <option hidden disabled selected value>-Selección-</option>
+        <option value="">1.</option>
+        <option value="">2.</option>
+        <option value="">3.</option>
+        <option value="">4.</option>
+        <option value="">5.</option>
+        <option value="">6.</option>
+    </select>
+    <label for="combo-box">Texto</label>
+    <div class="a-icono__contenedor">
+        <svg class="a-icono__svg -t24 -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="flecha-vector">
+                <path d="M5.88 4.12L13.76 12L5.88 19.88L8 22L18 12L8 2L5.88 4.12Z" />
+            </g>
+        </svg>
+    </div>
+</div>
  */
 
 .m-entrada__contenedor {
@@ -55,22 +75,20 @@
     color: var(--Color-Prim-azul1);
     font-size: var(--Fuente-T-TextoXL);
     font-weight: var(--Fuente-G-Medium);
+
+    transition: all 0.3;
 }
 
 @media screen and (max-width: 550px) {
     .m-entrada__contenedor {
         max-width: 33.6rem;
-        height: 5rem;
     }
 }
 
-.m-entrada__contenedor>input {
+.m-entrada__contenedor>.-control {
     position: relative;
-    padding: 0 1.2rem;
-    padding-right: 4.4rem;
 
     width: 100%;
-    height: 5rem;
 
     color: inherit;
     text-align: start;
@@ -79,13 +97,25 @@
 
     background: white;
 
+    resize: none;
     outline: none;
     border: none;
     border-radius: var(--Borde-r);
+    transition: inherit;
 }
 
-.m-entrada__contenedor>input:focus,
-.m-entrada__contenedor>textarea:focus {
+.m-entrada__contenedor>input {
+    position: relative;
+    padding: 0 1.2rem;
+
+    height: 5rem;
+}
+
+.m-entrada__contenedor>.-icono {
+    padding-right: 4.4rem;
+}
+
+.m-entrada__contenedor>.-control:focus {
     border: 0.2rem solid var(--Color-Prim-azul1);
     background: white;
     filter: var(--Sombra-ExteriorMD-Prim-Azul);
@@ -100,7 +130,7 @@
     cursor: text;
 }
 
-.m-entrada__contenedor>a {
+.m-entrada__contenedor>.a-icono__contenedor {
     position: absolute;
     right: 1.2rem;
     top: 1.2rem;
@@ -110,10 +140,8 @@
 }
 
 .m-entrada__contenedor>textarea {
-    position: relative;
     padding: 1.2rem;
 
-    width: 100%;
     height: 16.7rem;
 
     color: inherit;
@@ -121,19 +149,16 @@
     text-align: start;
     font-size: inherit;
     font-weight: inherit;
-
-    background: white;
-
-    resize: none;
-    outline: none;
-    border: none;
-    border-radius: var(--Borde-r);
 }
 
-.m-entrada__contenedor>input:focus~label,
-.m-entrada__contenedor>input:valid~label,
-.m-entrada__contenedor>textarea:focus~label,
-.m-entrada__contenedor>textarea:valid~label {
+@media screen and (max-width: 550px) {
+    .m-entrada__contenedor>textarea {
+        height: 12.3rem;
+    }
+}
+
+.m-entrada__contenedor>.-control:focus~label,
+.m-entrada__contenedor>.-control:valid~label {
     top: 0;
     font-size: var(--Fuente-T-TextoMD);
     font-weight: var(--Fuente-G-Regular);
@@ -149,4 +174,16 @@
 
     font-size: var(--Fuente-T-TextoMD);
     font-weight: var(--Fuente-G-Regular);
+}
+
+.m-entrada__contenedor>select {
+    padding: 1.2rem;
+
+    height: 5rem;
+
+    cursor: pointer;
+}
+
+.m-entrada__contenedor>select {
+    appearance: none;
 }

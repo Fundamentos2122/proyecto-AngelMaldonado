@@ -20,11 +20,11 @@
 
 <body>
     <div class="m-entrada__contenedor">
-        <input type="text" id="texto" required>
+        <input class="-control" type="text" id="texto" required>
         <label for="text">Texto</label>
     </div>
     <div class="m-entrada__contenedor">
-        <input type="text" id="texto" required>
+        <input class="-control -icono" type="text" id="texto" required>
         <label for="text">Texto</label>
         <a href="/" class="a-icono__contenedor">
             <svg class="a-icono__svg -t32 -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@
         </a>
     </div>
     <div class="m-entrada__contenedor">
-        <textarea name="text-area" maxlength="120" required></textarea>
+        <textarea class="-control" name="text-area" maxlength="120" required></textarea>
         <label for="text-area">Texto</label>
         <div class="-text-area-contador">
             <span class="-text-area-contadorActual">0 </span>
@@ -50,8 +50,26 @@
                         <path class="-lleno" d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" />
                     </g>
                 </svg>
-
             </a>
+        </div>
+    </div>
+    <div class="m-entrada__contenedor">
+        <select class="-control -icono" name="combo-box">
+            <option hidden disabled selected value>-Selección-</option>
+            <option value="">1.</option>
+            <option value="">2.</option>
+            <option value="">3.</option>
+            <option value="">4.</option>
+            <option value="">5.</option>
+            <option value="">6.</option>
+        </select>
+        <label for="combo-box">Texto</label>
+        <div class="a-icono__contenedor">
+            <svg class="a-icono__svg -t24 -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="flecha-vector">
+                    <path d="M5.88 4.12L13.76 12L5.88 19.88L8 22L18 12L8 2L5.88 4.12Z" />
+                </g>
+            </svg>
         </div>
     </div>
 </body>
