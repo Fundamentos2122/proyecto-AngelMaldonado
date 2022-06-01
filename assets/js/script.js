@@ -3,7 +3,7 @@
  *  Created On : Mon May 23 2022
  *  File : script.js
  *******************************************/
-cargaScript('/assets/css/molecules/control.js');
+cargaScript('/assets/components/molecules/control.js');
 
 function cargaScript(url) {
     var head = document.getElementsByTagName('head')[0];

@@ -93,13 +93,15 @@
 }
 
 .a-card__contenido.-miniatura {
-    max-width: 14.3rem;
+    width: 14.3rem;
     min-height: 14.3rem;
+
+    border-radius: 0;
 }
 
 @media screen and (max-width: 550px) {
     .a-card__contenido.-miniatura {
-        max-width: 16.2rem;
+        width: 16.2rem;
         min-height: 16.2rem;
     }
 }

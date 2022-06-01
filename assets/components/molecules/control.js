@@ -4,8 +4,6 @@
  *  File : control.js
  *******************************************/
 
-// const m_controles__numericos = document.getElementsByClassName('m-control -numerico');
-
 const control_numerico = document.getElementById('control-numerico');
 
 window.addEventListener('load', () => {
