@@ -76,8 +76,8 @@
 }
 
 .m-control.-calificador>label>svg {
-    width: var(--Icono-T24);
-    height: var(--Icono-T24);
+    width: var(--Icono-T40);
+    height: var(--Icono-T40);
 }
 
 .m-control.-calificador>label>svg>g>path {

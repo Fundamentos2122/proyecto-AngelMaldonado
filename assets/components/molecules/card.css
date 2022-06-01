@@ -1,0 +1,171 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Wed Jun 01 2022
+*  File : card.css
+*******************************************/
+
+.m-card {
+    display: flex;
+    border: 1px solid black;
+    border-radius: var(--Borde-r);
+}
+
+/**
+ * Uso:
+ <div class="m-card -producto">
+    <div class="a-card__contenido -cardProducto -efHover(filtro)">
+        <a href="/" class="-(filtro)"></a>
+    </div>
+    <div class="-info">
+        <h1 class="-precio">$1000.00</h1>
+        <p class="-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque placeat doloremque
+            ea, sit quia aliquam!t</p>
+        <div class="m-control -calificador">
+            <input type="radio" name="estrella" id="rc1">
+            <label for="estrella">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="estrella">
+                        <path id="estrella-vector"
+                            d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+                    </g>
+                </svg>
+            </label>
+            <input type="radio" name="estrella" id="rc2">
+            <label for="estrella">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="estrella">
+                        <path id="estrella-vector"
+                            d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+                    </g>
+                </svg>
+            </label>
+            <input type="radio" name="estrella" id="rc3">
+            <label for="estrella">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="estrella">
+                        <path id="estrella-vector"
+                            d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+                    </g>
+                </svg>
+            </label>
+            <input type="radio" name="estrella" id="rc4">
+            <label for="estrella">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="estrella">
+                        <path id="estrella-vector"
+                            d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+                    </g>
+                </svg>
+            </label>
+            <input type="radio" name="estrella" id="rc5">
+            <label for="estrella">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="estrella">
+                        <path id="estrella-vector"
+                            d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+                    </g>
+                </svg>
+            </label>
+        </div>
+    </div>
+</div>
+ */
+
+.m-card.-producto {
+    flex-direction: column;
+
+    max-width: 30.1rem;
+    height: 57.5rem;
+
+    background-color: var(--Color-Blanco);
+
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+    .m-card.-producto {
+        max-width: 16.2rem;
+        height: 33.6rem;
+    }
+}
+
+.m-card.-producto>* {
+    width: 100%;
+    height: 100%;
+}
+
+.m-card:hover {
+    max-width: 32.5rem;
+    height: 62.85rem;
+
+    filter: var(--Sombra-ExteriorLG-Negro);
+}
+
+@media screen and (max-width: 550px) {
+    .m-card:hover {
+        max-width: 17.8rem;
+        height: 36.919rem;
+    }
+}
+
+.m-card.-producto>.-info {
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: calc(100% - 2.4rem);
+
+    position: relative;
+    padding: 2.2rem 1.2rem;
+}
+
+@media screen and (max-width: 550px) {
+    .m-card.-producto>.-info {
+        padding: 0.8rem;
+        padding-top: 1.8rem;
+    }
+}
+
+.m-card.-producto>.-info>.-precio {
+    position: absolute;
+    padding: 0.4rem 0.8rem;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: var(--Color-Prim-verde4);
+    background-color: var(--Color-Prim-azul3);
+
+    border-radius: var(--Borde-r);
+}
+
+@media screen and (max-width: 550px) {
+    .m-card.-producto>.-info>.-precio {
+        font-size: var(--Fuente-T-TextoLG);
+        font-weight: var(--Fuente-G-SemiBold);
+    }
+}
+
+.m-card.-producto>.-info>.-descripcion {
+    font-size: var(--Fuente-T-TextoXL);
+    font-weight: var(--Fuente-G-Regular);
+}
+
+@media screen and (max-width: 550px) {
+    .m-card.-producto>.-info>.-descripcion {
+        font-size: var(--Fuente-T-TextoMD);
+        font-weight: var(--Fuente-G-Regular);
+    }
+}
+
+.m-card.-producto>.m-control.-calificador {
+    height: fit-content;
+}
+
+@media screen and (max-width: 550px) {
+    .m-card.-producto>.-info>.m-control.-calificador label>svg {
+        width: var(--Icono-T24);
+        height: var(--Icono-T24);
+    }
+}

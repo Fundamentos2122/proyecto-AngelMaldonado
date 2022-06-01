@@ -129,13 +129,14 @@
 }
 
 .a-card__contenido.-cardProducto {
-    max-width: 30.1rem;
+    width: 100%;
     min-height: 34.9rem;
+
+    border-radius: var(--Borde-r) var(--Borde-r) 0 0;
 }
 
 @media screen and (max-width: 550px) {
     .a-card__contenido.-cardProducto {
-        max-width: 16.2rem;
         min-height: 19.1rem;
     }
 }

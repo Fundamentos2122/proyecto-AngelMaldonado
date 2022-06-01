@@ -3,15 +3,16 @@
 *  Created On : Mon May 23 2022
 *  File : styles.css
 *******************************************/
-@import "/assets/css/tokens/tokens.css";
+@import "/assets/components/tokens/tokens.css";
 /* ATOMOS */
-@import "/assets/css/atoms/iconos.css";
-@import "/assets/css/atoms/avatar.css";
-@import "/assets/css/atoms/card.css";
-@import "/assets/css/atoms/boton.css";
+@import "/assets/components/atoms/iconos.css";
+@import "/assets/components/atoms/avatar.css";
+@import "/assets/components/atoms/card.css";
+@import "/assets/components/atoms/boton.css";
 /* MOLECULAS */
-@import "/assets/css/molecules/control.css";
-@import "/assets/css/molecules/entrada.css";
+@import "/assets/components/molecules/control.css";
+@import "/assets/components/molecules/entrada.css";
+@import "/assets/components/molecules/card.css";
 
 
 html {
@@ -26,4 +27,14 @@ html,
 body {
     margin: 0;
     /* background-image: var(--Color-Extra-lingrad-azul23); */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
 }

@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Angel Maldonado">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/components/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,57 +19,61 @@
 </head>
 
 <body>
-    <div class="m-entrada__contenedor">
-        <input class="-control" type="text" id="texto" required>
-        <label for="text">Texto</label>
-    </div>
-    <div class="m-entrada__contenedor">
-        <input class="-control -icono" type="text" id="texto" required>
-        <label for="text">Texto</label>
-        <a href="/" class="a-icono__contenedor">
-            <svg class="a-icono__svg -t32 -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="buscar-vector">
-                    <path
-                        d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14V14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" />
-                </g>
-            </svg>
-        </a>
-    </div>
-    <div class="m-entrada__contenedor">
-        <textarea class="-control" name="text-area" maxlength="120" required></textarea>
-        <label for="text-area">Texto</label>
-        <div class="-text-area-contador">
-            <span class="-text-area-contadorActual">0 </span>
-            <span class="-text-area-contadorMaximo">/ 120</span>
-            <a href="/" class="a-icono__contenedor">
-                <svg class="a-icono__svg -t24 -activo" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g id="enviar-vector">
-                        <path class="-delineado"
-                            d="M4.01 6.03L11.52 9.25L4 8.25L4.01 6.03V6.03ZM11.51 14.75L4 17.97V15.75L11.51 14.75V14.75ZM2.01 3L2 10L17 12L2 14L2.01 21L23 12L2.01 3Z" />
-                        <path class="-lleno" d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" />
-                    </g>
-                </svg>
-            </a>
+    <div class="m-card -producto">
+        <div class="a-card__contenido -cardProducto -efHover(filtro)">
+            <a href="/" class="-(filtro)"></a>
         </div>
-    </div>
-    <div class="m-entrada__contenedor">
-        <select class="-control -icono" name="combo-box">
-            <option hidden disabled selected value>-Selección-</option>
-            <option value="">1.</option>
-            <option value="">2.</option>
-            <option value="">3.</option>
-            <option value="">4.</option>
-            <option value="">5.</option>
-            <option value="">6.</option>
-        </select>
-        <label for="combo-box">Texto</label>
-        <div class="a-icono__contenedor">
-            <svg class="a-icono__svg -t24 -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="flecha-vector">
-                    <path d="M5.88 4.12L13.76 12L5.88 19.88L8 22L18 12L8 2L5.88 4.12Z" />
-                </g>
-            </svg>
+        <div class="-info">
+            <h1 class="-precio">$1000.00</h1>
+            <p class="-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque placeat doloremque
+                ea, sit quia aliquam!t</p>
+            <div class="m-control -calificador">
+                <input type="radio" name="estrella" id="rc1">
+                <label for="estrella">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="estrella">
+                            <path id="estrella-vector"
+                                d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+                        </g>
+                    </svg>
+                </label>
+                <input type="radio" name="estrella" id="rc2">
+                <label for="estrella">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="estrella">
+                            <path id="estrella-vector"
+                                d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+                        </g>
+                    </svg>
+                </label>
+                <input type="radio" name="estrella" id="rc3">
+                <label for="estrella">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="estrella">
+                            <path id="estrella-vector"
+                                d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+                        </g>
+                    </svg>
+                </label>
+                <input type="radio" name="estrella" id="rc4">
+                <label for="estrella">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="estrella">
+                            <path id="estrella-vector"
+                                d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+                        </g>
+                    </svg>
+                </label>
+                <input type="radio" name="estrella" id="rc5">
+                <label for="estrella">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="estrella">
+                            <path id="estrella-vector"
+                                d="M12.2584 16.8419L12 16.686L11.7416 16.8419L6.57613 19.9596L7.94693 14.0836L8.01549 13.7897L7.78739 13.5921L3.22308 9.63803L9.23227 9.12821L9.5327 9.10272L9.65036 8.82511L12 3.2813L14.3496 8.82511L14.4673 9.10272L14.7677 9.12821L20.7769 9.63803L16.2126 13.5921L15.9845 13.7897L16.0531 14.0836L17.4239 19.9596L12.2584 16.8419Z" />
+                        </g>
+                    </svg>
+                </label>
+            </div>
         </div>
     </div>
 </body>
