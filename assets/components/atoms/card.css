@@ -7,6 +7,9 @@
 
 /**
  * Uso:
+<div class="a-card__contenido -infoProducto -efHover(filtro) -slide">
+    <a href="/" class="-(filtro)"></a>
+</div>
 <div class="a-card__contenido -info -efHover(filtro) -ef(sombraEXMD-Negro)">
         <a href="/" class="-(filtro)"></a>
 </div>
@@ -107,8 +110,8 @@
 }
 
 .a-card__contenido.-infoProducto {
-    max-width: 32.8rem;
-    min-height: 32.8rem;
+    max-width: 44rem;
+    min-height: 44rem;
 }
 
 @media screen and (max-width: 550px) {

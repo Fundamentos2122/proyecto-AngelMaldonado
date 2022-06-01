@@ -8,7 +8,7 @@
 /**
  * Uso:
 <div class="o-slider__contenedor">
-    <div class="-slider">
+    <div class="-slider -pantalla">
         <div class="-slides">
             <div id="slides__1" class="a-card__pantalla -slide">
             </div>
@@ -63,6 +63,63 @@
         </div>
     </div>
 </div>
+
+<div class="o-slider__contenedor -column">
+    <div class="-slider -producto">
+        <div class="-slides">
+            <div id="slides__1" class="a-card__contenido -infoProducto -efHover(filtro) -slide">
+                <a href="/" class="-(filtro)"></a>
+            </div>
+            <div id="slides__2" class="a-card__contenido -infoProducto -efHover(filtro) -slide">
+                <a href="/" class="-(filtro)"></a>
+            </div>
+            <div id="slides__3" class="a-card__contenido -infoProducto -efHover(filtro) -slide">
+                <a href="/" class="-(filtro)"></a>
+            </div>
+            <div id="slides__4" class="a-card__contenido -infoProducto -efHover(filtro) -slide">
+                <a href="/" class="-(filtro)"></a>
+            </div>
+        </div>
+    </div>
+    <div class="m-control -menuSlides">
+        <a href="#slides__1" class="a-icono__contenedor">
+            <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="boton-radio-menuSlides-vector">
+                    <path class="-delineado"
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                    <circle class="-lleno" cx="12" cy="12" r="10" />
+                </g>
+            </svg>
+        </a>
+        <a href="#slides__2" class="a-icono__contenedor">
+            <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="boton-radio-menuSlides-vector">
+                    <path class="-delineado"
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                    <circle class="-lleno" cx="12" cy="12" r="10" />
+                </g>
+            </svg>
+        </a>
+        <a href="#slides__3" class="a-icono__contenedor">
+            <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="boton-radio-menuSlides-vector">
+                    <path class="-delineado"
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                    <circle class="-lleno" cx="12" cy="12" r="10" />
+                </g>
+            </svg>
+        </a>
+        <a href="#slides__4" class="a-icono__contenedor">
+            <svg class="a-icono__svg -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="boton-radio-menuSlides-vector">
+                    <path class="-delineado"
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" />
+                    <circle class="-lleno" cx="12" cy="12" r="10" />
+                </g>
+            </svg>
+        </a>
+    </div>
+</div>
  */
 
 .o-slider__contenedor {
@@ -73,12 +130,31 @@
     height: fit-content;
 }
 
-.o-slider__contenedor>.-slider {
-    width: 100%;
-    height: 90vh;
+.o-slider__contenedor.-column {
+    flex-direction: column;
+    gap: 0.8rem;
+}
 
+.o-slider__contenedor>.-slider {
     overflow: hidden;
     position: relative;
+}
+
+.o-slider__contenedor>.-slider.-pantalla {
+    width: 100%;
+    height: 90vh;
+}
+
+.o-slider__contenedor>.-slider.-producto {
+    width: 44rem;
+    height: 44rem;
+}
+
+@media screen and (max-width: 550px) {
+    .o-slider__contenedor>.-slider.-producto {
+        width: 32.8rem;
+        height: 32.8rem;
+    }
 }
 
 .o-slider__contenedor>.-slider>.-slides {
@@ -114,6 +190,14 @@
 .o-slider__contenedor>.-slider>.m-control.-menuSlides {
     position: absolute;
     bottom: 5%;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+}
+
+.o-slider__contenedor>.-slider.-producto>.m-control.-menuSlides {
+    position: absolute;
+    bottom: 0;
     left: 50%;
     margin-left: -100px;
     text-align: center;
