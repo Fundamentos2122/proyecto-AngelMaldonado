@@ -11,6 +11,7 @@
 @import "/assets/css/atoms/boton.css";
 /* MOLECULAS */
 @import "/assets/css/molecules/control.css";
+@import "/assets/css/molecules/entrada.css";
 
 
 html {

@@ -19,29 +19,40 @@
 </head>
 
 <body>
-    <div class="m-control -numerico">
-        <a onclick="m_control__numerico__actualiza(this)" class="a-icono__contenedor -menos">
-            <svg class="a-icono__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="menos-vector">
-                    <path class="-lleno"
-                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 13H7V11H17V13Z" />
-                    <path class="-delineado"
-                        d="M7 11V13H17V11H7ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" />
+    <div class="m-entrada__contenedor">
+        <input type="text" id="texto" required>
+        <label for="text">Texto</label>
+    </div>
+    <div class="m-entrada__contenedor">
+        <input type="text" id="texto" required>
+        <label for="text">Texto</label>
+        <a href="/" class="a-icono__contenedor">
+            <svg class="a-icono__svg -t32 -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="buscar-vector">
+                    <path
+                        d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14V14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" />
                 </g>
             </svg>
         </a>
-        <input type="number" min="1" max="100" step="1" value="1" id="control-numerico"
-            onchange="m_control__numerico__actualiza_botones(this)">
-        <a onclick="m_control__numerico__actualiza(this)" class="a-icono__contenedor -mas">
-            <svg class="a-icono__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="mas-vector">
-                    <path class="-delineado"
-                        d="M13 7H11V11H7V13H11V17H13V13H17V11H13V7ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" />
-                    <path class="-lleno"
-                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 13H13V17H11V13H7V11H11V7H13V11H17V13Z" />
-                </g>
-            </svg>
-        </a>
+    </div>
+    <div class="m-entrada__contenedor">
+        <textarea name="text-area" maxlength="120" required></textarea>
+        <label for="text-area">Texto</label>
+        <div class="-text-area-contador">
+            <span class="-text-area-contadorActual">0 </span>
+            <span class="-text-area-contadorMaximo">/ 120</span>
+            <a href="/" class="a-icono__contenedor">
+                <svg class="a-icono__svg -t24 -activo" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="enviar-vector">
+                        <path class="-delineado"
+                            d="M4.01 6.03L11.52 9.25L4 8.25L4.01 6.03V6.03ZM11.51 14.75L4 17.97V15.75L11.51 14.75V14.75ZM2.01 3L2 10L17 12L2 14L2.01 21L23 12L2.01 3Z" />
+                        <path class="-lleno" d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" />
+                    </g>
+                </svg>
+
+            </a>
+        </div>
     </div>
 </body>
 

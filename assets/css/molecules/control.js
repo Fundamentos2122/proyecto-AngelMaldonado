@@ -9,7 +9,8 @@
 const control_numerico = document.getElementById('control-numerico');
 
 window.addEventListener('load', () => {
-    m_control__numerico__actualiza_botones();
+    if (control_numerico)
+        m_control__numerico__actualiza_botones();
 });
 
 function m_control__numerico__actualiza(boton) {

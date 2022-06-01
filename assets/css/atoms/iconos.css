@@ -17,6 +17,8 @@
 .a-icono__contenedor {
     display: inline-block;
 
+    height: fit-content;
+
     text-decoration: none;
 }
 

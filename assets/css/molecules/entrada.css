@@ -1,0 +1,152 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Mon May 30 2022
+*  File : entrada.css
+*******************************************/
+@import "/assets/css/tokens/tokens.css";
+
+/**
+ * Uso:
+<div class="m-entrada__contenedor">
+    <input type="text" id="texto" required>
+    <label for="text">Texto</label>
+</div>
+<div class="m-entrada__contenedor">
+    <input type="text" id="texto" required>
+    <label for="text">Texto</label>
+    <a href="/" class="a-icono__contenedor">
+        <svg class="a-icono__svg -t32 -activo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="buscar-vector">
+                <path
+                    d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14V14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" />
+            </g>
+        </svg>
+    </a>
+</div>
+<div class="m-entrada__contenedor">
+    <textarea name="text-area" maxlength="120" required></textarea>
+    <label for="text-area">Texto</label>
+    <div class="-text-area-contador">
+        <span class="-text-area-contadorActual">0 </span>
+        <span class="-text-area-contadorMaximo">/ 120</span>
+        <a href="/" class="a-icono__contenedor">
+            <svg class="a-icono__svg -t24 -activo" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="enviar-vector">
+                    <path class="-delineado"
+                        d="M4.01 6.03L11.52 9.25L4 8.25L4.01 6.03V6.03ZM11.51 14.75L4 17.97V15.75L11.51 14.75V14.75ZM2.01 3L2 10L17 12L2 14L2.01 21L23 12L2.01 3Z" />
+                    <path class="-lleno" d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" />
+                </g>
+            </svg>
+
+        </a>
+    </div>
+</div>
+ */
+
+.m-entrada__contenedor {
+    display: flex;
+    position: relative;
+    padding-bottom: 0.2rem;
+
+    max-width: 46rem;
+    height: fit-content;
+
+    color: var(--Color-Prim-azul1);
+    font-size: var(--Fuente-T-TextoXL);
+    font-weight: var(--Fuente-G-Medium);
+}
+
+@media screen and (max-width: 550px) {
+    .m-entrada__contenedor {
+        max-width: 33.6rem;
+        height: 5rem;
+    }
+}
+
+.m-entrada__contenedor>input {
+    position: relative;
+    padding: 0 1.2rem;
+    padding-right: 4.4rem;
+
+    width: 100%;
+    height: 5rem;
+
+    color: inherit;
+    text-align: start;
+    font-size: inherit;
+    font-weight: inherit;
+
+    background: white;
+
+    outline: none;
+    border: none;
+    border-radius: var(--Borde-r);
+}
+
+.m-entrada__contenedor>input:focus,
+.m-entrada__contenedor>textarea:focus {
+    border: 0.2rem solid var(--Color-Prim-azul1);
+    background: white;
+    filter: var(--Sombra-ExteriorMD-Prim-Azul);
+}
+
+.m-entrada__contenedor>label {
+    position: absolute;
+    left: 1.2rem;
+    top: 1.6rem;
+
+    transition: all 0.3s;
+    cursor: text;
+}
+
+.m-entrada__contenedor>a {
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.m-entrada__contenedor>textarea {
+    position: relative;
+    padding: 1.2rem;
+
+    width: 100%;
+    height: 16.7rem;
+
+    color: inherit;
+    font-family: var(--Fuente-Principal);
+    text-align: start;
+    font-size: inherit;
+    font-weight: inherit;
+
+    background: white;
+
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: var(--Borde-r);
+}
+
+.m-entrada__contenedor>input:focus~label,
+.m-entrada__contenedor>input:valid~label,
+.m-entrada__contenedor>textarea:focus~label,
+.m-entrada__contenedor>textarea:valid~label {
+    top: 0;
+    font-size: var(--Fuente-T-TextoMD);
+    font-weight: var(--Fuente-G-Regular);
+}
+
+.-text-area-contador {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.2rem;
+
+    font-size: var(--Fuente-T-TextoMD);
+    font-weight: var(--Fuente-G-Regular);
+}
