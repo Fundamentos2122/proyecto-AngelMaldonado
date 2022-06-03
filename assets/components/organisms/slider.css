@@ -127,7 +127,7 @@
     align-items: center;
     justify-content: center;
 
-    height: fit-content;
+    height: 100%;
 }
 
 .o-slider__contenedor.-column {
@@ -155,6 +155,28 @@
         width: 32.8rem;
         height: 32.8rem;
     }
+}
+
+.o-slider__contenedor>.-slider.-citas {
+    width: 100%;
+    height: 90vh;
+}
+
+.o-slider__contenedor>.-slider.-citas>.-slides>.-cita.-slide {
+    display: flex;
+    position: relative;
+
+    height: 90vh;
+}
+
+.o-slider__contenedor>.-slider.-citas>.-slides>.-cita.-slide>.a-avatar {
+    max-width: 46rem;
+}
+
+.o-slider__contenedor>.-slider.-citas>.-slides>.-cita.-slide>.a-avatar:after {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
 }
 
 .o-slider__contenedor>.-slider>.-slides {
